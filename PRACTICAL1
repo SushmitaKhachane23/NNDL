@@ -1,0 +1,23 @@
+import numpy as np
+
+vector1 = np.array([10,20,30])
+vector2 = np.array([50,60,70])
+
+print("Vector1 =",vector1)
+print("Vector2 =",vector2)
+
+addition = vector1 + vector2
+print("Addition =",addition)
+
+import numpy as np
+
+matrix1=np.array([[2,5,3],
+                 [4,3,6]])
+matrix2=np.array([[2,7],
+                 [6,3]])
+
+print("Matrix1=",matrix1)
+print("Matrix2=",matrix2)
+
+result=np.matmul(matrix2,matrix1)
+print("Multiplication=",result)
