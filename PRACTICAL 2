@@ -1,0 +1,30 @@
+import numpy as np
+from sklearn.linear_model import Perceptron
+
+# Input data
+X = np.array([
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [1, 1]
+])
+
+# Target output (AND operation)
+y = np.array([0, 0, 0, 1])
+
+# Create Perceptron model
+model = Perceptron(max_iter=1000, eta0=0.1, random_state=42)
+
+# Train the model
+model.fit(X, y)
+
+# Predict output
+prediction = model.predict(X)
+
+# Display results
+print("Actual Output    :", y)
+print("Predicted Output :", prediction)
+
+# Display accuracy
+accuracy = model.score(X, y)
+print("Accuracy         :", accuracy)
